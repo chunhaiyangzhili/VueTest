@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User-Update</title>
+    <style type="text/css">
+        ul li{list-style-type: none;}
+    </style>
+</head>
+<body>
+<h1>The User Update Page</h1>
+<form th:action="@{/user/updateUserById}" method="post">
+    <input type="hidden" name="userId" th:value="${user.userId}">
+    <ul>
+        <li>name:</li>
+        <li><input type="text" name="userName" th:value="${user.userName}"></li>
+        <li>age:</li>
+        <li><input type="text" name="userAge" th:value="${user.userAge}"></li>
+        <li>job:</li>
+        <li><input type="text" name="userJob" th:value="${user.userJob}"></li>
+        <li>phone:</li>
+        <li><input type="text" name="userPhone" th:value="${user.userPhone}"></li>
+        <li><input type="submit" value="Update User"></li>
+    </ul>
+</form>
+</body>
+</html>

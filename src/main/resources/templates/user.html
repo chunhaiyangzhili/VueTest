@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<h2>Welcome to UserPage</h2>
+<a th:href="@{/user/insertUserUI}">add User</a>
+<table>
+    <thead>
+    <th>userId</th>
+    <th>userName</th>
+    <th>userAge</th>
+    <th>userJob</th>
+    <th>userPhone</th>
+    <th>options</th>
+    </thead>
+    <tbody>
+    <tr th:each="g:${list}">
+        <td th:text="${g.userId}">1</td>
+        <td th:text="${g.userName}">MySqL</td>
+        <td th:text="${g.userAge}">DBMS</td>
+        <td th:text="${g.userJob}">2020/10/01</td>
+        <td th:text="${g.userPhone}">2020/10/01</td>
+        <td><a th:href="@{/user/deleteUserById/{id}(id=${g.userId})}">delete</a></td>
+        <td><a th:href="@{/user/selectUserById/{id}(id=${g.userId})}">update</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
