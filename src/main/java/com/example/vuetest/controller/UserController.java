@@ -54,6 +54,8 @@ public class UserController {
         map.put("list", list);
         map.put("total", total);
         map.put("currentPage", pageIndex);
+        int nizhenbang = 180;
+        System.out.println(nizhenbang);
         return map;
     }
 
