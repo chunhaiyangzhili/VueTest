@@ -54,6 +54,7 @@ public class UserController {
         map.put("list", list);
         map.put("total", total);
         map.put("currentPage", pageIndex);
+        int nihao = 10;
         return map;
     }
 
